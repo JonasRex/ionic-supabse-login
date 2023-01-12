@@ -1,0 +1,7 @@
+{
+  "name": "login-project",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
