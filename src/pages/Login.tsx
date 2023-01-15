@@ -45,16 +45,16 @@ const Login: React.FC = () => {
     }
 
     if (data) {
-      if (data.user?.email != null) {
-        setLoginError("");
-        setUser(data.user?.email);
-        console.log(data);
-        setEmail("");
-        setPassword("");
-        // Redirect to home page
-        history.push("/home");
-        //localStorage.setItem("User", user)
-      }
+      setLoginError("");
+      setUser(data.user?.email);
+      console.log(data);
+      setEmail("");
+      setPassword("");
+      // Redirect to home page
+    }
+    if (data.user?.email != null) {
+      localStorage.setItem("User", user);
+      history.push("/home");
     }
   };
 
